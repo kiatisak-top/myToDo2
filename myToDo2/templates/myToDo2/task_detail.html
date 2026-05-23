@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>Task Detail</h1>
+    {% if task %}
+        <p>Title: {{ task.title }}</p>
+        <p>Due Date: {{ task.due_date }}</p>
+    {% else %}
+        <p>Task not found.</p>
+    {% endif %}
+    <a href="{% url 'task_list' %}">Back to Task List</a>
+</body>
+</html>
